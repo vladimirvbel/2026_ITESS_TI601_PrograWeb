@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Elements</title>
+    <style>
+        .claserojo {color:red}
+        .claseverde {color:green}
+        .clasefondo {background-color: fuchsia;}
+        .h1style {border:2px dotted rgb(95, 1, 95)}
+        .h2style {border:2px solid dodgerblue}
+        th, td{
+            color: #00ca54;
+            background-color: #96D4D4;
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>My first heading</h1>
+    <p>Lorem ipsum dolor sit<br> amet consectetur.</p>
+    <a href="#C4">Jump to Chapter</a>
+    <a href="html_demo.html#C4">Jump to Chapter 44</a>
+    <a href="https://www.pngmart.com/files/23/Pop-Cat-PNG-HD-Isolated.png" alt="Pop cat">gato</a>
+    <img src="/images/cat.png" alt="popcat" title="gato" width="300" height="300">
+    <p class="claserojo">Hola muy buenas tardes</p>
+
+    
+    <h1 class="claserojo"">Hola</h1>
+    <h2 class="claseverde">Hola</h2>
+    <h3 class="claseverde">Hola</h3>
+    <h4 class="claseverde">Hola</h4>
+    <h5 class="claseverde">Hola</h5>
+    <h6 class="claseverde">Hola</h6>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, atque?</p>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, illum?</p>
+    
+    <!-- es para dar formato a un texto, ignora saltos de linea -->
+    <pre>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, quo. Voluptas quam aut, quia perferendis saepe sequi. Explicabo, qui ex?
+    </pre>
+    <hr>
+    <p><b>Lorem</b> ipsum <strong>dolor</strong> <i>sit amet consectetur adipisicing elit.</i> <em>Cum</em>, minus, totam <mark>corporis accusantium</mark> autem eos, quod quas <small>officia eaque nobis</small> alias<del>magnam</del>dicta odio debitis. <ins>Officia </ins>possimus <sub>ipsa odit aliquam</sub>, sapiente quaerat cupiditate<sup> fuga doloribus repellat</sup> consequuntur reprehenderit qui dolor.</p>
+    <p><b>Negrita</b></p>
+    <p><strong>Texto con importancia SEO</strong></p>
+    <p><i>Cursiva (Itálica)</i></p>
+    <p><em>Emphasized</em></p>
+    <p><mark>Texto resaltado</mark></p>
+    <p><small>Texto pequeño</small></p>
+    <p><del>Eliminar</del></p>
+    <p><ins>Insertar</ins></p>
+    <p>Texto normal<sub>subscript</sub></p>
+    <p>Texto normal<sup>superscript</sup></p>
+
+    <blockquote cite="url">Hola</blockquote>
+    <p>WWF's goal is to: <q>cita en linea</q></p>
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948</p>
+    <br>
+    <!--La etiqueta <address> define la informacion de contacto del autor/propietario de un documento o artículo. El texto del elemento <address> normalmente se muestra en cursiva y los navegadores siempre agregarán un salto de línea antes y después del elemento <address>-->
+    <address class="clasefondo">
+        Written by John Doe.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+    <hr>
+    <h1 style="background-color: rgb(2, 128, 245);">hello world</h1>
+    <p style="background-color: coral;">Lorem ipsum dolor sit amet.</p>
+    <h1 class="h1style">Hola</h1>
+    <h1 class="h2style">que tal</h1>
+
+    <hr>
+
+    <h1 style="background-color:rgb(255,99,71); text-align: center">RGB</h1>
+    <h1 style="background-color:#ff6347; text-align: center">HEX</h1>
+    <h1 style="background-color:hsl(9,100%,64%); text-align: center">HSL</h1>
+    
+
+    <h1 style="background-color:rgba(255,99,71,0.5); text-align: center">RGBA(alpha)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.7); text-align: center">HSLA(alpha)</h1>
+    <hr>
+    <a href="https://www.youtube.com/" target="_self">pretederminado. Abre el documento en la misma ventana/pestana en la que se hizo clic</a>
+    <br>
+    <a href="https://www.youtube.com/" target="_blank">abre el documento en una nueva ventana o pestana</a>
+    <br>
+    <a href="https://www.youtube.com/" target="_parent">abre el documento en el marco principal</a>
+    <br>
+    <a href="https://www.youtube.com/" target="_top">abre el documento en el cuerpo completo de la ventana</a>
+    <br>
+
+    <a href="https://www.youtube.com/">
+        <img src="/images/cat.png" title="YouTube" alt="Gato Youtube" style="width:450px;height:450px;">
+    </a>
+    <br>
+    <a href="mailto:nam.chulito123@gmail.com" title="mandar correo">Send email</a>
+    <h2 id="C4"> Chapter 4</h2>
+    <hr>
+    <h2>Tables</h2>
+    <table>
+        <!--Encabezado-->
+        <tr> <!--Fila--> 
+            <th>Primer</th><!--columna-->
+            <th>Segundo</th>
+            <th>Tercero</th>
+        </tr>
+        <tr>
+            <td>Emil</td>
+            <td>Torvalds</td>
+            <td>Linus</td>
+        </tr>
+        <tr>
+            <td>kernel</td>
+            <td>GNU</td>
+            <td>Linux</td>
+        </tr>
+        <tr>
+            <td>kernel</td>
+            <td>GNU</td>
+            <td>Linux</td>
+        </tr>
+        <tr>
+            <td>kernel</td>
+            <td>GNU</td>
+            <td>Linux</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

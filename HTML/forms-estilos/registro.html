@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Completo</title>
+    <style>
+        /* Estilos selectores de etiquetas */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1a73e8;
+            border-bottom: 2px solid #e8f0fe;
+            padding-bottom: 8px;
+            margin-top: 25px;
+        }
+
+        /* Estructura de formularios */
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #dadce0;
+            border-radius: 6px;
+            box-sizing: border-box; 
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            background-color: #f8fbff;
+        }
+
+        fieldset {
+            margin-top: 25px;
+            border: 1px solid #d1d1d1;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        legend {
+            padding: 0 12px;
+            font-weight: bold;
+            color: #1a73e8;
+            font-size: 1.1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1557b0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #70757a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <hgroup>
+            <h1>Sistema de Registro</h1>
+            <p>Complete todos los campos para el alta en la plataforma</p>
+        </hgroup>
+    </header>
+
+    <main>
+        <form action="bienvenido.html" method="GET">
+            
+            <section>
+                <h2>Datos de Identidad</h2>
+                
+                <label>Tratamiento:</label>
+                <select name="tratamiento">
+                    <option value="sr">Sr.</option>
+                    <option value="sra">Sra.</option>
+                    <option value="no_binario">No binario</option>
+                </select>
+
+                <label>Nombre y Apellidos:</label>
+                <input type="text" name="nombre" placeholder="Nombre(s)" required />
+                <input type="text" name="apellido_p" placeholder="Apellido Paterno" />
+                <input type="text" name="apellido_m" placeholder="Apellido Materno" />
+
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" name="fecha_nacimiento" required />
+
+                <label>Sexo:</label>
+                <select name="genero">
+                    <option value="mujer">Mujer</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <input type="text" name="genero_especifique" placeholder="Si eligió 'Otro', especifique aquí">
+            </section>
+
+            <section>
+                <h2>Contacto y Seguridad</h2>
+                
+                <label>Teléfono:</label>
+                <input type="tel" name="telefono" placeholder="Ej: 5512345678" />
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="usuario@correo.com" required />
+                
+                <label for="correo_confirm">Comprobación de correo:</label>
+                <input type="email" id="correo_confirm" name="correo_confirm" placeholder="Repita su correo" required />
+
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="pass" name="password" required />
+
+                <label for="pass_confirm">Comprobación de contraseña:</label>
+                <input type="password" id="pass_confirm" name="password_confirm" required />
+            </section>
+
+            <fieldset>
+                <legend>Dirección Completa</legend>
+                
+                <label>Calle:</label>
+                <input type="text" name="calle" placeholder="Nombre de la calle" required />
+                
+                <label>Números:</label>
+                <input type="text" name="numero_exterior" placeholder="Núm. Exterior" required />
+                <input type="text" name="numero_interior" placeholder="Núm. Interior (Opcional)" />
+                
+                <label>Localización:</label>
+                <input type="text" name="colonia" placeholder="Colonia" required />
+                <input type="text" name="codigo_postal" maxlength="10" placeholder="Código Postal / ZIP" required />
+                <input type="text" name="municipio" placeholder="Municipio / Delegación" required />
+                <input type="text" name="estado" placeholder="Estado" required />
+                <input type="text" name="pais" value="México" required />
+            </fieldset>
+
+            <section>
+                <h2>Información Adicional</h2>
+                
+                <label>Cargar un archivo:</label>
+                <input type="file" name="archivo_usuario" />
+
+                <label>Mensaje adicional:</label>
+                <textarea name="mensaje" rows="4" placeholder="Escriba sus observaciones aquí..."></textarea>
+            </section>
+
+            <button type="submit">Enviar Registro</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Pagina formulario &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
